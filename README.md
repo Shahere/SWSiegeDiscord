@@ -1,2 +1,2 @@
 # SWSiegeDiscord
-Show siège stats on your discord server
+Show siege stats on your discord server
