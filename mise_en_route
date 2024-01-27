@@ -1,2 +1,4 @@
-environnement virtuel : .\.env\Scripts\activate
+environnement virtuel : source bot-env/bin/activate
+
+Linux based systems : python3 mainCap.py
 

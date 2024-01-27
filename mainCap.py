@@ -20,7 +20,7 @@ strday = ["Lundi","Mardi","Mecredi","Jeudi","Vendredi","Samedi","Dimanche"]
 
 load_dotenv(dotenv_path="config")
 
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.members = True
 intents.reactions = True
 
@@ -40,14 +40,13 @@ class BotSW(commands.Bot):
 
     async def on_ready(self):
         print(f"{self.user.display_name} est connecté")
-        channel = self.get_channel(845691201432322048)
-        nombre = random.randint(0,4)
-        await channel.send(botpret[nombre])
-        channel = self.get_channel(936323623822696488)
+        channel = self.get_channel(1200788779301085265)
         nombre = random.randint(0,4)
         await channel.send(botpret[nombre])
 
     async def on_message(self, message):
+        #print(message)
+        print(message.content.lower())
         if(message.content.lower()=="ping"):
             await message.channel.send("pong")
 
